@@ -8,6 +8,8 @@
       - [Basic Node.js and NPM(Node Package Manager)](#basic-nodejs-and-npmnode-package-manager)
       - [Additional Resources](#additional-resources)
       - [Exercise: Getting Started with Bootstrap](#exercise-getting-started-with-bootstrap)
+      - [Foundation of Responsive Design](#foundation-of-responsive-design)
+      - [Bootstrap Grid Syste](#bootstrap-grid-syste)
 
 ### Week-1: Front-End Web UI Frameworks Overview: Bootstrap
 
@@ -168,7 +170,23 @@ npm install jquery@3.3.1 popper.js@1.12.9 --save
 
 - Now, do a Git commit with the message "Intro. to Bootstrap". You may push the commit to your online repository.
 
+#### Foundation of Responsive Design
 
+- Grid System
+- Fluid Image
+- Media Queries
+
+```css
+@media (min-width: 992px) {
+  /* css style */
+  .container {
+    width: 540px;
+    max-width: 100%;
+  }
+}
+```
+
+#### Bootstrap Grid System
 
 <!-- Addition urls-->
 [1]: https://d3c33hcgiwev3.cloudfront.net/bOGnMCzEEeiTdA5yoE99Fg_6da6f2f02cc411e8b484f7e801bd0278_Bootstrap4-starter.zip?Expires=1613347200Signature=U4i4k~3q8OKzEJoFksadMLCLlganxQTShNnawNcVTSKG9x92~M7A5Jj2MG8zY~u6Mjq88wRKpJ37FNd-NpQQsUFtr1ffQVaN4g5TXe0yTA48deubXzpB825XtNGVAS0u2YXEsJuK3OfG2Kf63Y18mKDAgt8H4b10wDLw6DFwZY4_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
