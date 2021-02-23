@@ -9,7 +9,8 @@
       - [Additional Resources](#additional-resources)
       - [Exercise: Getting Started with Bootstrap](#exercise-getting-started-with-bootstrap)
       - [Foundation of Responsive Design](#foundation-of-responsive-design)
-      - [Bootstrap Grid Syste](#bootstrap-grid-syste)
+      - [Bootstrap Grid System](#bootstrap-grid-system)
+    - [Navigation and Navigation Bar](#navigation-and-navigation-bar)
 
 ### Week-1: Front-End Web UI Frameworks Overview: Bootstrap
 
@@ -190,3 +191,17 @@ npm install jquery@3.3.1 popper.js@1.12.9 --save
 
 <!-- Addition urls-->
 [1]: https://d3c33hcgiwev3.cloudfront.net/bOGnMCzEEeiTdA5yoE99Fg_6da6f2f02cc411e8b484f7e801bd0278_Bootstrap4-starter.zip?Expires=1613347200Signature=U4i4k~3q8OKzEJoFksadMLCLlganxQTShNnawNcVTSKG9x92~M7A5Jj2MG8zY~u6Mjq88wRKpJ37FNd-NpQQsUFtr1ffQVaN4g5TXe0yTA48deubXzpB825XtNGVAS0u2YXEsJuK3OfG2Kf63Y18mKDAgt8H4b10wDLw6DFwZY4_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+
+### Navigation and Navigation Bar
+
+| Class             | Description                                                                                                                                  | Other Options             |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| .navbar           | Allows use to create a navigation bar.                                                                                                       |                           |
+| .navbar-dark      | Navigation bar in dark color                                                                                                                 | light                     |
+| .navbar-expand-sm | Below `sm` navbar toggle-able navbar. That means, it will collapse in those screen sizes.                                                    | `md`, `lg`, `xl`, `xxl`   |
+| .bg-primary       | Set navbar background color.                                                                                                                 | dark, secondary, and etc. |
+| .fixed-top        | We web page is rendering and scrolling the navigation bar fixed in the top                                                                   | fixed-bottom, static-top  |
+| .navbar-brand     | Allows us to display information as `branding` information in navigation bar                                                                 |                           |
+| .navbar-nav       | This allows us to define the set of links that will be included in my navigation bar. And aslo displayed horizontally in the navigation bar. |                           |
+| .mr-auto          | The content will be pushed as left as possible within the navigation bar.                                                                    |                           |
+| .nav-item         | Allows list item display horizontally in the navigation bar                                                                                  |                           |
