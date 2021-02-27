@@ -138,3 +138,5 @@ Django version 3.1.5, using settings 'schoolproject.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
+
+Next Task: [T-11](https://www.youtube.com/watch?v=r-bAwErQ5pQ&list=PLbGui_ZYuhigchy8DTw4pX4duTTpvqlh6&index=12&ab_channel=GeekyShows)
