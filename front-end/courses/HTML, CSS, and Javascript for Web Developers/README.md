@@ -15,6 +15,11 @@
       - [Lecture 8: HTML Character Entity References](#lecture-8-html-character-entity-references)
       - [Lecture 9: Creating Links](#lecture-9-creating-links)
       - [Displaying Images](#displaying-images)
+    - [Introduction to CSS3](#introduction-to-css3)
+      - [Power of CSS](#power-of-css)
+      - [Anatomy of CSS](#anatomy-of-css)
+      - [Element, Class and ID Selector](#element-class-and-id-selector)
+      - [Combining Selectors](#combining-selectors)
 
 ### Introduction to HTML5
 
@@ -304,7 +309,103 @@ Every **HTML** tag has predefined `attribute`. Example
 - Remember to specify width and height attributes whenever possible.
 - Inline Element
 
-| Snippets                                                                                   | Discussion     |
-| ------------------------------------------------------------------------------------------ | -------------- |
+| Snippets                                                                                     | Discussion     |
+| -------------------------------------------------------------------------------------------- | -------------- |
 | `<img src="picture-with-quote.jpg" width="400" height="235" alt="Picture with a quote">`     | Internal Links |
 | `<img src="http://lorempixel.com/output/nature-q-c-640-480-1.jpg" width="640" height="480">` | External Links |
+
+### Introduction to CSS3
+
+#### Power of CSS
+
+[CSS Zen Garden](http://csszengarden.com/)
+
+#### Anatomy of CSS
+
+```text
+selector {
+  property: value;
+}
+```
+
+```html
+<head>
+<title> ... </title>
+<style>
+p {
+  color: blue;
+  font-size: 20px;
+  width: 200px;
+}
+
+h1 {
+  color: green;
+  font-size: 36px;
+  text-align: center;
+}
+</style>
+</head>
+```
+
+#### Element, Class and ID Selector
+
+```css
+/* element selector */
+p {
+  /* property: value; */
+  color: blue;
+}
+
+/* class selector */
+.row {
+  /* property: value; */
+  background-color: red;
+  opacity: .6; /* value can be between 0.0 to 1.0*/
+}
+
+#mainId {
+  /* property: value; */
+  text-position: center;
+  font-size: 10px;
+}
+```
+
+#### Combining Selectors
+
+```css
+/* Element with class selectors */
+/* <p class="big"> ...</p> */
+p.big {
+  font-size: 10px;
+}
+
+/* Child Selector */
+/* Every <p> that is a direct child of <article> */
+article > p {
+  color: blue;
+}
+
+/* Descendant Selector */
+/* Every p that is inside of article */
+
+article p {
+  color: blue;
+}
+
+/* Not limited to element selectors */
+.colored p {
+  color: blue;
+}
+
+article > .colored {
+  color: blue;
+}
+```
+
+| Name                           | Snip                  | Affect                                            |
+| ------------------------------ | --------------------- | ------------------------------------------------- |
+| Element with `class selectors` | `p.big { .... }`      | Every `<p>` with class `big`                      |
+| `Child` Selector               | `article > p { ... }` | Every `<p>` that is a direct child of `<article>` |
+| `Descendant` Selector          | `article p { ... }`   | Every `<p>` that is inside of `<article>`         |
+| Element Selectors              | `colored p { ... }`   | Any `<p>` with `class="colored"`                  |
+| Element Selectors              | `
