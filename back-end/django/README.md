@@ -278,9 +278,9 @@ admin.py*  apps.py*  __init__.py*  migrations/  models.py*  tests.py*  views.py*
 - Function Based View
 - Class Based View
 
-<center>
+<p align="center">
 <h2>Function Based View</h2>
-</center>
+</p>
 
 - A function based view , is a Python function that takes a `Web Request` and returns `Web Response`.
 - The response can be `HTML` contents of a web page, or `redirect`, or `404` error, or an `XML` document, or an `image` or `anything`.
@@ -319,7 +319,9 @@ from course import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name='index')
+    path('', views.index, name='index'),
+    path('math/', views.learn_math, name='math'),
+    path('home/', views.home, name='home'),
 ]
 ```
 
