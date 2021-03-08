@@ -20,6 +20,8 @@
       - [Anatomy of CSS](#anatomy-of-css)
       - [Element, Class and ID Selector](#element-class-and-id-selector)
       - [Combining Selectors](#combining-selectors)
+      - [Pseudo-Class Selectors](#pseudo-class-selectors)
+      - [Style Placement](#style-placement)
 
 ### Introduction to HTML5
 
@@ -408,4 +410,143 @@ article > .colored {
 | `Child` Selector               | `article > p { ... }` | Every `<p>` that is a direct child of `<article>` |
 | `Descendant` Selector          | `article p { ... }`   | Every `<p>` that is inside of `<article>`         |
 | Element Selectors              | `colored p { ... }`   | Any `<p>` with `class="colored"`                  |
-| Element Selectors              | `
+
+#### Pseudo-Class Selectors
+
+```css
+/*
+  selector:pseudo-class {
+    ....
+  }
+  * There are many pseudo class selector exist....
+  * :link
+  * :visited
+  * :hover
+  * :active
+  * :nth-child(....)
+*/
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pseudo Class Selectors</title>
+<style>
+/* Styles go here. */
+header li {
+  list-style: none;
+}
+a:link, a:visited {
+  text-decoration: none;
+  background-color: green;
+  border: 1px solid blue;
+  color: black;
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+a:hover, a:active {
+  background-color: red;
+  color: purple;
+}
+
+header li:nth-child(3) {
+  font-size: 24px;
+}
+
+section div:nth-child(odd) {
+  background-color: gray;
+}
+
+section div:nth-child(4):hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<h1>Pseudo Class Selectors</h1>
+
+<header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a></li>
+    <li><a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a></li>
+  </ul>
+</header>
+
+<section>
+  <div>DIV 1</div>
+  <div>DIV 2</div>
+  <div>DIV 3</div>
+  <div>DIV 4</div>
+  <div>DIV 5</div>
+  <div>DIV 6</div>
+  <div>DIV 7</div>
+  <div>DIV 8</div>
+  <div>DIV 9</div>
+  <div>DIV 10</div>
+  <div>DIV 11</div>
+  <div>DIV 12</div>
+  <div>DIV 13</div>
+  <div>DIV 14</div>
+  <div>DIV 15</div>
+  <div>DIV 16</div>
+  <div>DIV 17</div>
+  <div>DIV 18</div>
+  <div>DIV 19</div>
+  <div>DIV 20</div>
+</section>
+
+</body>
+</html>
+```
+
+| Name        | Snip                                             |
+| ----------- | ------------------------------------------------ |
+| `:link`     | `a:link { ... }`                                 |
+| `:hover`    | `a:hover { ... }`                                |
+| `:visited`  | `a:visited { ... }`                              |
+| `:active`   | `a:active { ... }`                               |
+| `:nth-chil` | `sectoion div:nth-child(odd/1/..):hover { ... }` |
+
+#### Style Placement
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Style Placement</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+h2 {
+  color: maroon;
+}
+
+</style>
+</head>
+<body>
+<h1>Style Placement</h1>
+<h2>Subheading 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<h2>Subheading 2</h2>
+<p style="text-align: center;">I am centered!</p>
+
+</body>
+</html>
+```
+
+| Name                               | Snip                                       |
+| ---------------------------------- | ------------------------------------------ |
+| `Inline Style`, **Least Use**      | `<p style="text-align: center;"> ... </p>` |
+| `Internal Style`                   | `<style> h2 { property: value; } </style>` |
+| `External Stylesheet` **Most Use** | `<link rel="stylesheet" href="style.css"`  |
+
+> Real sites almost always use external styles
