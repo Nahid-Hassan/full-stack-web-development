@@ -16,6 +16,7 @@
     - [Create and Install Django Application](#create-and-install-django-application)
     - [Application Directory Structure in Django](#application-directory-structure-in-django)
     - [Function Based Views in Django](#function-based-views-in-django)
+    - [Url Dispatcher](#url-dispatcher)
 
 ### What is Framework
 
@@ -278,10 +279,9 @@ admin.py*  apps.py*  __init__.py*  migrations/  models.py*  tests.py*  views.py*
 - Function Based View
 - Class Based View
 
-<p align="center">
+<center align="center">
 <h2>Function Based View</h2>
-</p>
-
+</center>
 - A function based view , is a Python function that takes a `Web Request` and returns `Web Response`.
 - The response can be `HTML` contents of a web page, or `redirect`, or `404` error, or an `XML` document, or an `image` or `anything`.
 - Each `view` function takes an `HttpRequest` object as `first` parameter.
@@ -326,3 +326,50 @@ urlpatterns = [
 ```
 
 **Next**: [URL](https://youtu.be/XQYSlaEBSzw?list=PLbGui_ZYuhigchy8DTw4pX4duTTpvqlh6&t=990)
+
+### Url Dispatcher
+
+<center>
+<h2> URL Dispatcher </h2>
+</center>
+
+- To design **URLs** for app, you create a Python module informally named `urls.py`. This module is pure PYthon code and is mapping between **ULR** path and expressions to **view** functions.
+- This mapping can be as short or as long as needed.
+- It can be referenced other mappings. **(Not used)**
+- It's pure Python code so it can be constructed dynamically.
+
+```py
+# urls.py
+
+# urlpatterns = [
+#   path(route, views, kwargs=None, name=None),
+# ]
+
+urlpatterns = [
+  path('learndj/', views,learn_django),
+]
+```
+
+![images](images/12.png)
+
+```py
+# ------------------------------
+# views.py
+# ------------------------------
+from django.http import HttpResponse
+
+def learndj(request):
+  return HttpResponse('<h1> Hello World </h1>')
+
+
+# ------------------------------
+# urls.py
+# ------------------------------
+# path(route, view, kwars, name)
+from django.urls import path
+
+urlpatterns = [
+  # path('learndj/', views.learn_django, {'check': 'Ok'}, name='learndj)
+  path('learndj/', views.learn_django, name='learndj)
+]
+```
