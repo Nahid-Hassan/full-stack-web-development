@@ -22,6 +22,10 @@
       - [Combining Selectors](#combining-selectors)
       - [Pseudo-Class Selectors](#pseudo-class-selectors)
       - [Style Placement](#style-placement)
+      - [Styling Text](#styling-text)
+      - [The Box Model](#the-box-model)
+      - [Background Property](#background-property)
+      - [Positioning Elements by Floating](#positioning-elements-by-floating)
 
 ### Introduction to HTML5
 
@@ -550,3 +554,142 @@ h2 {
 | `External Stylesheet` **Most Use** | `<link rel="stylesheet" href="style.css"`  |
 
 > Real sites almost always use external styles
+
+#### Styling Text
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Styling Text</title>
+    <style>
+        .style {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0000ff;
+            /* italic, normal, oblique */
+            font-style: italic;
+            /* font-weight */
+            font-weight: bold;
+            /* default 16px */
+            font-size: 18px;
+            /* capitalize, lowercase, uppercase */
+            text-transform: capitalize;
+            /* center, left, right, justify */
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <p>You can get commonly used font combinations from <a
+            href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">http://www.w3schools.com/cssref/css_websafe_fonts.asp</a>.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod necessitatibus a ullam dolorum amet
+        reprehenderit sit laudantium reiciendis aperiam. </p>
+    <p class="style">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam fugiat repudiandae fugit porro
+        commodi.</p>
+</body>
+
+</html>
+```
+
+![images](images/7.png)
+
+#### The Box Model
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+
+/* *: Select every element  */
+/* using border-box for sizing box
+  e.k.a width=300px; now if we set border-sizing=border-box;
+  300 pixels is = margin + padding + border + rest of width
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* inherently apply this properties element to apply */
+body {
+  background-color: gray;
+}
+
+/*  */
+#box {
+  background-color: blue;
+  padding: 10px;
+  border: 5px solid black;
+  width: 300px;
+  height: 50px;
+  margin-top: 50px;
+  /* if overflow occur a scroll bar is present */
+  overflow: auto;
+}
+#content {
+  background-color: #90EE90; /* green */
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit error quis ab perspiciatis eos inventore recusandae iste itaque numquam facilis, tenetur. Doloribus officiis quae facilis, nisi, ex similique. Animi, perferendis.
+  </div>
+</div>
+
+
+</body>
+</html>
+```
+
+![images](images/8.png)
+![images](images/9.png)
+![images](images/10.png)
+![images](images/11.png)
+![images](images/12.png)
+![images](images/13.png)
+![images](images/14.png)
+
+#### Background Property
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Background</title>
+<style>
+#bg {
+  width: 500px;
+  height: 500px;
+  background: url('yaakov.png') no-repeat top center;
+  background-color: blue;
+}
+
+
+</style>
+</head>
+<body>
+<div id="bg">Background properties are fun!</div>
+</body>
+</html>
+```
+
+![images](images/15.png)
+
+#### Positioning Elements by Floating
