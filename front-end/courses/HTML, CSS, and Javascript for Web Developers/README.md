@@ -26,6 +26,15 @@
       - [The Box Model](#the-box-model)
       - [Background Property](#background-property)
       - [Positioning Elements by Floating](#positioning-elements-by-floating)
+      - [Absolute and Relative Positing](#absolute-and-relative-positing)
+      - [Media Queries - 1](#media-queries---1)
+      - [Media Queries - 2](#media-queries---2)
+      - [Responsive Design - 1](#responsive-design---1)
+      - [Responsive Design - 2](#responsive-design---2)
+      - [Bootstrap Starter](#bootstrap-starter)
+      - [Bootstrap Grid - 1](#bootstrap-grid---1)
+      - [Bootstrap Grid - 2](#bootstrap-grid---2)
+    - [Coding the Static Restaurant Site](#coding-the-static-restaurant-site)
 
 ### Introduction to HTML5
 
@@ -693,3 +702,340 @@ h1 {
 ![images](images/15.png)
 
 #### Positioning Elements by Floating
+
+Later added the scripts and documents for <mark>Floating Position</mark>
+
+#### Absolute and Relative Positing
+
+```text
+<html> is by default relative.
+```
+
+**Relative**:
+
+![images](images/16.png)
+![images](images/17.png)
+
+**Absolute**:
+
+![images](images/18.png)
+
+![images](images/19.png)
+
+![images](images/20.png)
+
+#### Media Queries - 1
+
+![images](images/21.png)
+
+![images](images/22.png)
+
+![images](images/23.png)
+
+![images](images/24.png)
+
+#### Media Queries - 2
+
+```py
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Media Queries</title>
+<style>
+
+/********** Base styles **********/
+h1 {
+  margin-bottom: 15px;
+}
+
+p {
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+#p1 {
+  background-color: #A52A2A;
+  width: 300px;
+  height: 300px;
+}
+#p2 {
+  background-color: #DEB887;
+  width: 50px;
+  height: 50px;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  #p1 {
+    width: 80%;
+  }
+  #p2 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  #p1 {
+    width: 50%;
+  }
+  #p2 {
+    width: 100px;
+    height: 100px;
+  }
+  body {
+    background-color: blue;
+  }
+}
+
+</style>
+</head>
+<body>
+<h1>Media Queries</h1>
+
+<p id="p1"></p>
+<p id="p2"></p>
+
+</body>
+</html>
+```
+
+#### Responsive Design - 1
+
+![images](images/25.png)
+
+![images](images/26.png)
+
+![images](images/27.png)
+
+![images](images/28.png)
+
+![images](images/29.png)
+
+#### Responsive Design - 2
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Layout</title>
+<style>
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+h1 {
+  margin-bottom: 15px;
+}
+
+p {
+  border: 1px solid black;
+  background-color: #A52A2A;
+  width: 90%;
+  height: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Helvetica;
+  color: white;
+}
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+    border: 1px solid green;
+  }
+  .col-lg-1 {
+    width: 8.33%;
+  }
+  .col-lg-2 {
+    width: 16.66%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.33%;
+  }
+  .col-lg-5 {
+    width: 41.66%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.33%;
+  }
+  .col-lg-8 {
+    width: 66.66%;
+  }
+  .col-lg-9 {
+    width: 74.99%;
+  }
+  .col-lg-10 {
+    width: 83.33%;
+  }
+  .col-lg-11 {
+    width: 91.66%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+    border: 1px solid green;
+  }
+  .col-md-1 {
+    width: 8.33%;
+  }
+  .col-md-2 {
+    width: 16.66%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33%;
+  }
+  .col-md-5 {
+    width: 41.66%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33%;
+  }
+  .col-md-8 {
+    width: 66.66%;
+  }
+  .col-md-9 {
+    width: 74.99%;
+  }
+  .col-md-10 {
+    width: 83.33%;
+  }
+  .col-md-11 {
+    width: 91.66%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+<h1>Responsive Layout</h1>
+
+<div class="row">
+  <div class="col-lg-3 col-md-6"><p>Item 1</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 2</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 3</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 4</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 5</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 6</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 7</p></div>
+  <div class="col-lg-3 col-md-6"><p>Item 8</p></div>
+</div>
+
+</body>
+</html>
+```
+
+#### Bootstrap Starter
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>Bootstrap Starter Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+<body>
+
+  <h1>Hello Coursera!</h1>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+```
+
+#### Bootstrap Grid - 1
+
+![images](images/30.png)
+
+#### Bootstrap Grid - 2
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Starter Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">Col 1</div>
+      <div class="col-md-4 col-sm-6">Col 2</div>
+      <div class="col-md-4 col-sm-6">Col 3</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 col-sm-6">Col 1</div>
+      <div class="col-md-4 col-sm-6">Col 2</div>
+      <div class="col-md-4 col-sm-6">Col 3</div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">Col 1</div>
+      <div class="col-xs-6">Col 2</div>
+      <div class="col-xs-6">Col 3</div>
+    </div>
+  </div>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+```
+
+### Coding the Static Restaurant Site
+
