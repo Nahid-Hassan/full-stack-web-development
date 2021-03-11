@@ -35,6 +35,10 @@
       - [Bootstrap Grid - 1](#bootstrap-grid---1)
       - [Bootstrap Grid - 2](#bootstrap-grid---2)
     - [Coding the Static Restaurant Site](#coding-the-static-restaurant-site)
+      - [Visit with the Client - 1](#visit-with-the-client---1)
+      - [Step - 1: Some Ground Rules](#step---1-some-ground-rules)
+      - [Step - 2: Coding Basics of Navbar Header - 1](#step---2-coding-basics-of-navbar-header---1)
+      - [Step - 3: Coding Basics of Navbar Header - 2](#step---3-coding-basics-of-navbar-header---2)
 
 ### Introduction to HTML5
 
@@ -1039,3 +1043,127 @@ p {
 
 ### Coding the Static Restaurant Site
 
+#### Visit with the Client - 1
+
+- Bring examples of other sites to help client figure out what they want?
+- Encourage client to use less information.
+- Client should invest the project.
+- Client should have one person as the decider
+- Limit number of revisions
+- Involve others to help you produce a great product.
+
+#### Step - 1: Some Ground Rules
+
+**Project Tree**:
+
+```console
+devcoders:restaurant-site nahid$ ls
+css  fonts  index.html  js
+devcoders:restaurant-site nahid$ tree
+.
+├── css
+│   ├── bootstrap.css
+│   ├── bootstrap.css.map
+│   ├── bootstrap.min.css
+│   ├── bootstrap.min.css.map
+│   ├── bootstrap-theme.css
+│   ├── bootstrap-theme.css.map
+│   ├── bootstrap-theme.min.css
+│   ├── bootstrap-theme.min.css.map
+│   └── styles.css
+├── fonts
+│   ├── glyphicons-halflings-regular.eot
+│   ├── glyphicons-halflings-regular.svg
+│   ├── glyphicons-halflings-regular.ttf
+│   ├── glyphicons-halflings-regular.woff
+│   └── glyphicons-halflings-regular.woff2
+├── index.html
+└── js
+    ├── bootstrap.js
+    ├── bootstrap.min.js
+    ├── jquery-2.1.4.min.js
+    ├── npm.js
+    └── script.js
+
+3 directories, 20 files
+```
+
+**index.html**:
+
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>David Chu's China Bistro</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <p>Hello World!</p>
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
+
+```
+
+**styles.css**:
+
+```css
+body {
+    font-size: 16px;
+    color: white;
+    background-color: #61122f;
+    font-family: 'Oxygen',
+    sans-serif;
+}
+```
+
+#### Step - 2: Coding Basics of Navbar Header - 1
+
+Added new snippet....
+
+```html
+<header>
+  <nav id="header-nav" class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="index.html">
+          <!-- Here use id for use logo image as background image -->
+          <div id="logo-img" alt="Logo Image"></div>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+```
+
+```css
+/* Header */
+#header-nav {
+    background-color: #f6b319;
+    border-radius: 0;
+    border: 0;
+}
+
+#logo-img {
+    background: url('./../images/restaurant-logo_large.png') no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 10px 15px 10px 0;
+}
+```
+
+#### Step - 3: Coding Basics of Navbar Header - 2
