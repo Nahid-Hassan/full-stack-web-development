@@ -39,6 +39,7 @@
       - [Step - 1: Some Ground Rules](#step---1-some-ground-rules)
       - [Step - 2: Coding Basics of Navbar Header - 1](#step---2-coding-basics-of-navbar-header---1)
       - [Step - 3: Coding Basics of Navbar Header - 2](#step---3-coding-basics-of-navbar-header---2)
+      - [Step - 4: Coding Nav Menu Buttons - 1](#step---4-coding-nav-menu-buttons---1)
 
 ### Introduction to HTML5
 
@@ -1167,3 +1168,14 @@ Added new snippet....
 ```
 
 #### Step - 3: Coding Basics of Navbar Header - 2
+
+```html
+<button class="navbar-toggle collapsed" data-toggle='collapsed' data-target="#collapsable-nav" aria-expanded="false">
+  <span class="sr-only">Toggle Navigation</span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button>
+```
+
+#### Step - 4: Coding Nav Menu Buttons - 1
